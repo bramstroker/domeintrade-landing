@@ -1,0 +1,99 @@
+a, a:hover, a:focus {
+	color: #f58b3c;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+    color: #f58b3c !important;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    color: #f58b3c !important;
+    background-color: transparent;
+}
+.navbar-brand{
+    color: #f58b3c !important;
+}
+.navbar-default .navbar-nav>li>a:hover {
+    color: #f58b3c !important;
+
+}
+ .navbar-default .navbar-toggle .icon-bar {
+  background-color: #f58b3c;
+}
+
+
+
+
+.btn-subscribe, 
+.btn-contact {
+  background: #f58b3c;
+  border: 1px solid #e97931;
+  color: #fff !important;
+  -webkit-box-shadow: inset 0 1px 0 #f69c45;
+  -moz-box-shadow: inset 0 1px 0 #f69c45;
+  box-shadow: inset 0 1px 0 #f69c45;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.btn-subscribe:hover, 
+.btn-contact:hover {
+  background: #e46526;
+  border: 1px solid #d6561f;
+  color: #fff !important;
+  -webkit-box-shadow: inset 0 1px 0 #e8742c;
+  -moz-box-shadow: inset 0 1px 0 #e8742c;
+  box-shadow: inset 0 1px 0 #e8742c;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.btn-subscribe:active, 
+.btn-contact:active {
+  background: #e46526;
+  border: 1px solid #d6561f;
+  color: #fff !important;
+  -webkit-box-shadow: inset 0 1px 0 #e8742c;
+  -moz-box-shadow: inset 0 1px 0 #e8742c;
+  box-shadow: inset 0 1px 0 #e8742c;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.top-content .logo a {
+    color: #f58b3c;
+}
+
+.top-content .logo a:hover { 
+    color: #f58b3c;
+}
+.inner-team {
+    background-color: rgba(255, 128, 31, 0.6);
+}
+
+.features-box1 .icon i, .features-box2 .icon i, .features-box3 .icon i, .features-box4 .icon i, .features-box5 .icon i, .features-box6 .icon i{
+	color: #e46526;
+}
+
+
+.features-box1:hover .icon i, .features-box2:hover .icon i, .features-box3:hover .icon i, .features-box4:hover .icon i, .features-box5:hover .icon i, .features-box6:hover .icon i{
+	color: #f58b3c;
+}
+
+	.productbox div {
+		color: #e46526 !important;
+	}
+		.productbox:hover div {
+		color: #f58b3c !important;
+	}
+.price-column.large h2 {
+	padding: 30px 0;
+	background: #f58b3c;
+}
+
+.social-icon :hover {
+color: #f58b3c; 
+}
+
+
+.copyright a:hover {
+color: #f58b3c; 
+}
+
+
+
