@@ -17,9 +17,11 @@ return [
     'templates' => [
         'layout' => 'layout/default',
         'map' => [
-            'layout/default' => 'templates/layout/default.phtml',
-            'error/error'    => 'templates/error/error.phtml',
-            'error/404'      => 'templates/error/404.phtml',
+            'layout/default'  => 'templates/layout/default.phtml',
+            'error/error'     => 'templates/error/error.phtml',
+            'error/404'       => 'templates/error/404.phtml',
+            'mail/contact'    => 'templates/mail/contact.phtml',
+            'contact/success' => 'templates/contact/success.phtml',
         ],
         'paths' => [
             'app'    => ['templates/app'],

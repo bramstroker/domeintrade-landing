@@ -18,19 +18,19 @@
                     <div class="vertical-registration-form">
                         <h3>Koop dit domein nu</h3>
                         <h6>Bent u geinteresserd in dit domein neem dan nu contact met ons op.</h6>
-                        <form class="registration-form" action="registration.php">
+                        <form class="contact-form" action="<?=$this->url('contact')?>">
                             <fieldset>
                                 <div class="form-group">
                                     <p>Naam</p>
-                                    <input id="name" name="name" type="text" class="optin-input">
+                                    <input id="name" name="name" type="text" class="optin-input" required="">
                                 </div>
                                 <div class="form-group">
                                     <p>Email</p>
-                                    <input id="email" name="email" type="email" class="optin-input">
+                                    <input id="email" name="email" type="email" class="optin-input" required="">
                                 </div>
                                 <div class="form-group">
                                     <p>Bericht</p>
-                                    <textarea id="email" name="email" type="email" class="optin-input"></textarea>
+                                    <textarea id="message" name="message" class="optin-input" required=""></textarea>
                                 </div>
                                 <div class="form-group">
                                     <button class="btn btn-top-white btn-lg" type="submit">Versturen</button>

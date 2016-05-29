@@ -1,13 +1,20 @@
 <?php
 
+use App\Action\ContactAction;
+use App\Action\ContactActionFactory;
+use App\Action\HomePageAction;
+use App\Action\HomePageFactory;
+use Zend\Expressive\Router\FastRouteRouter;
+use Zend\Expressive\Router\RouterInterface;
+
 return [
     'dependencies' => [
         'invokables' => [
-            Zend\Expressive\Router\RouterInterface::class => Zend\Expressive\Router\FastRouteRouter::class,
-            App\Action\PingAction::class => App\Action\PingAction::class,
+            RouterInterface::class => FastRouteRouter::class,
         ],
         'factories' => [
-            App\Action\HomePageAction::class => App\Action\HomePageFactory::class,
+            HomePageAction::class => HomePageFactory::class,
+            ContactAction::class => ContactActionFactory::class,
         ],
     ],
 
@@ -15,8 +22,14 @@ return [
         [
             'name' => 'home',
             'path' => '/',
-            'middleware' => App\Action\HomePageAction::class,
+            'middleware' => HomePageAction::class,
             'allowed_methods' => ['GET'],
+        ],
+        [
+            'name' => 'contact',
+            'path' => '/contact',
+            'middleware' => ContactAction::class,
+            'allowed_methods' => ['POST'],
         ],
     ],
 ];

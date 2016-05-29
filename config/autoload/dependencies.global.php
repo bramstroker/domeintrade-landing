@@ -1,24 +1,24 @@
 <?php
+use App\Factory\ContactServiceFactory;
+use App\InputFilter\ContactInputFilter;
+use App\Service\ContactService;
 use Zend\Expressive\Application;
 use Zend\Expressive\Container\ApplicationFactory;
 use Zend\Expressive\Helper;
+use Zend\Expressive\Helper\ServerUrlHelper;
+use Zend\Expressive\Helper\UrlHelper;
+use Zend\Expressive\Helper\UrlHelperFactory;
 
 return [
-    // Provides application-wide services.
-    // We recommend using fully-qualified class names whenever possible as
-    // service names.
     'dependencies' => [
-        // Use 'invokables' for constructor-less services, or services that do
-        // not require arguments to the constructor. Map a service name to the
-        // class name.
         'invokables' => [
-            // Fully\Qualified\InterfaceName::class => Fully\Qualified\ClassName::class,
-            Helper\ServerUrlHelper::class => Helper\ServerUrlHelper::class,
+            ServerUrlHelper::class => ServerUrlHelper::class,
+            ContactInputFilter::class => ContactInputFilter::class
         ],
-        // Use 'factories' for services provided by callbacks/factory classes.
         'factories' => [
             Application::class => ApplicationFactory::class,
-            Helper\UrlHelper::class => Helper\UrlHelperFactory::class,
+            UrlHelper::class => UrlHelperFactory::class,
+            ContactService::class => ContactServiceFactory::class
         ],
     ],
 ];

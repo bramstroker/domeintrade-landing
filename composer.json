@@ -24,6 +24,7 @@
         "zendframework/zend-stdlib": "^2.7 || ^3.0",
         "zendframework/zend-expressive-fastroute": "^1.0",
         "zendframework/zend-servicemanager": "^2.7.3 || ^3.0",
+        "zendframework/zend-inputfilter": "~2.7",
         "ocramius/proxy-manager": "^1.0 || ^2.0",
         "zendframework/zend-expressive-zendviewrenderer": "^1.0"
     },
