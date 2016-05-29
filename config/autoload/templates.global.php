@@ -18,6 +18,7 @@ return [
         'layout' => 'layout/default',
         'map' => [
             'layout/default'  => 'templates/layout/default.phtml',
+            'layout/blank'    => 'templates/layout/blank.phtml',
             'error/error'     => 'templates/error/error.phtml',
             'error/404'       => 'templates/error/404.phtml',
             'mail/contact'    => 'templates/mail/contact.phtml',
@@ -26,6 +27,7 @@ return [
         'paths' => [
             'app'    => ['templates/app'],
             'layout' => ['templates/layout'],
+            'mail' => ['templates/mail'],
             'error'  => ['templates/error'],
         ],
     ],

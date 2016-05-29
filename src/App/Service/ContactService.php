@@ -24,7 +24,13 @@ class ContactService
     
     public function sendRequest(array $contactData)
     {
-        $message = $this->renderer->render('mail/contact', ['contact' => $contactData]);
+        $message = $this->renderer->render(
+            'mail::contact',
+            [
+                'layout' => 'layout::blank',
+                'contact' => $contactData
+            ]
+        );
         mail('bgerritsen@gmail.com', 'Domein order', $message);
     }
 }
