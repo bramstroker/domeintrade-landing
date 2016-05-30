@@ -1,5 +1,7 @@
 <?php
 
+use App\View\Helper\GoogleAnalyticsFactory;
+
 return [
     'dependencies' => [
         'factories' => [
@@ -30,5 +32,11 @@ return [
             'mail' => ['templates/mail'],
             'error'  => ['templates/error'],
         ],
+    ],
+
+    'view_helpers' => [
+        'factories' => [
+            'analytics' => GoogleAnalyticsFactory::class
+        ]
     ],
 ];

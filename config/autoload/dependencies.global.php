@@ -2,6 +2,7 @@
 use App\Factory\ContactServiceFactory;
 use App\InputFilter\ContactInputFilter;
 use App\Service\ContactService;
+use ContainerInteropDoctrine\EntityManagerFactory;
 use Zend\Expressive\Application;
 use Zend\Expressive\Container\ApplicationFactory;
 use Zend\Expressive\Helper;
@@ -18,7 +19,8 @@ return [
         'factories' => [
             Application::class => ApplicationFactory::class,
             UrlHelper::class => UrlHelperFactory::class,
-            ContactService::class => ContactServiceFactory::class
+            ContactService::class => ContactServiceFactory::class,
+            'doctrine.entity_manager.orm_default' => EntityManagerFactory::class,
         ],
     ],
 ];
