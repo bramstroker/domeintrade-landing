@@ -9,6 +9,8 @@
 namespace App\Service;
 
 use Zend\Expressive\Template\TemplateRendererInterface;
+use Zend\Mail\Message;
+use Zend\Mail\Transport\TransportInterface;
 
 class ContactService
 {
@@ -16,21 +18,32 @@ class ContactService
      * @var TemplateRendererInterface
      */
     protected $renderer;
-    
-    public function __construct(TemplateRendererInterface $renderer)
+
+    /** @var TransportInterface */
+    protected $mailTransport;
+
+    public function __construct(TemplateRendererInterface $renderer, TransportInterface $mailTransport)
     {
         $this->renderer = $renderer;
+        $this->mailTransport = $mailTransport;
     }
     
     public function sendRequest(array $contactData)
     {
-        $message = $this->renderer->render(
+        $mailBody = $this->renderer->render(
             'mail::contact',
             [
                 'layout' => 'layout::blank',
                 'contact' => $contactData
             ]
         );
-        mail('bgerritsen@gmail.com', 'Domein order', $message);
+
+        $mail = new Message();
+        $mail->setBody($mailBody);
+        $mail->setFrom('bgerritsen@gmail.com', "Bram Gerritsen");
+        $mail->addTo('bgerritsen@gmail.com', 'Domain order');
+        $mail->setSubject('Domain order');
+
+        $this->mailTransport->send($mail);
     }
 }

@@ -11,13 +11,14 @@ namespace App\Factory;
 use App\Service\ContactService;
 use Interop\Container\ContainerInterface;
 use Zend\Expressive\Template\TemplateRendererInterface;
+use Zend\Mail\Transport\TransportInterface;
 
 class ContactServiceFactory
 {
     public function __invoke(ContainerInterface $container)
     {
         return new ContactService(
-            $container->get(TemplateRendererInterface::class)
+            $container->get(TemplateRendererInterface::class), $container->get(TransportInterface::class)
         );
     }
 }
