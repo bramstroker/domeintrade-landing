@@ -1,5 +1,7 @@
 <?php
 
+use App\Factory\ZendView\LayoutFactory;
+use App\Factory\ZendView\RendererFactory;
 use App\View\Helper\GoogleAnalyticsFactory;
 
 return [
@@ -9,10 +11,12 @@ return [
                 Zend\Expressive\Container\TemplatedErrorHandlerFactory::class,
 
             Zend\Expressive\Template\TemplateRendererInterface::class =>
-                Zend\Expressive\ZendView\ZendViewRendererFactory::class,
+                RendererFactory::class,
 
             Zend\View\HelperPluginManager::class =>
                 Zend\Expressive\ZendView\HelperPluginManagerFactory::class,
+
+            'layout' => LayoutFactory::class
         ],
     ],
 
